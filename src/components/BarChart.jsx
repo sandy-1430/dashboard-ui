@@ -18,12 +18,12 @@ export default function BarChart() {
     },
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     yaxis: [{
-      show: true,  
+      show: true,
       labels: {
         formatter: function (value) {
           return value;
         }
-      },    
+      },
     }, {
       show: false,
     }],
@@ -47,12 +47,38 @@ export default function BarChart() {
   }]
 
   return (
-    <Chart
-        options={options}
-        series={series}
-        type="bar"
-        width="100%"
-        height="100%"
-      />
+    <div className="card">
+      <div className="card-header d-flex">
+        <div className='card-header-left d-flex align_center'>
+          <h4 className='card-title'>Application’s  Info</h4>
+          <div className="legend d-flex align_center">
+            <div className="d-flex legend-item align_center">
+              <div className="bar-legend"></div>
+              <p>Received</p>
+            </div>
+            <div className="d-flex align_center legend-item align_center">
+              <div className="line-legend"></div>
+              <p>Processed</p>
+            </div>
+          </div>
+        </div>
+        <div className="dropdown">
+          <select>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+          </select>
+        </div>
+      </div>
+      <div className="card-body">
+        <Chart
+          options={options}
+          series={series}
+          type="bar"
+          width="100%"
+          height="100%"
+        />
+      </div>
+    </div>
+
   )
 }

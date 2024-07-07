@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.align_center{
+.align_center {
     align-items: center;
 }
 
@@ -10,47 +10,51 @@
     justify-content: space-between;
 }
 
-.just_center{
+.just_center {
     justify-content: center;
 }
 
-.gap_40{
+.gap_40 {
     gap: 40px;
 }
 
-.flex_60{
+.gap_30 {
+    gap: 30px;
+}
+
+.flex_60 {
     flex-basis: 60%;
 }
 
-.flex_50{
+.flex_50 {
     flex-basis: 50%;
 }
 
-.flex_40{
+.flex_40 {
     flex-basis: 40%;
 }
 
-.flex_70{
+.flex_70 {
     flex-basis: 70%;
 }
 
-.flex_30{
+.flex_30 {
     flex-basis: 30%;
 }
 
-.text-right{
+.text-right {
     text-align: right;
 }
 
-.primary{
+.primary {
     color: $primary;
 }
 
-.search-bar{
+.search-bar {
     width: toRem(450);
     position: relative;
 
-    input{
+    input {
         background: $white;
         padding: toRem(20) toRem(23);
         border: none;
@@ -61,7 +65,7 @@
         width: 100%;
     }
 
-    .search-icon{
+    .search-icon {
         position: absolute;
         top: 50%;
         right: 5%;
@@ -69,24 +73,26 @@
     }
 }
 
-.outline-btn, .primary-btn, .filter-btn{
+.outline-btn,
+.primary-btn,
+.filter-btn {
     all: unset;
     border-radius: toRem(3);
     padding: toRem(12) toRem(14);
 }
 
-.outline-btn{
+.outline-btn {
     background: $white;
     border: toRem(1) solid $primary;
     color: $primary;
 }
 
-.primary-btn{
+.primary-btn {
     color: $white;
     background: $primary;
 }
 
-.filter-btn{
+.filter-btn {
     display: flex;
     align-items: center;
     gap: toRem(10);
@@ -95,7 +101,7 @@
 }
 
 // Header Styles
-header{
+header {
     padding: toRem(32) toRem(20);
     background: $white;
     box-shadow: $shadow;
@@ -103,25 +109,26 @@ header{
     top: 0;
     z-index: 9;
 
-    .left-header{
+    .left-header {
         flex: 1 0 0;
         gap: toRem(90);
 
-        .logo img{
+        .logo img {
             width: toRem(232);
         }
     }
 
-    .right-header{
+    .right-header {
         gap: toRem(90);
-        img{
+
+        img {
             width: toRem(25);
             height: toRem(25);
         }
     }
 }
 
-aside.sidebar{
+aside.sidebar {
     position: sticky;
     width: toRem(125);
     top: toRem(190);
@@ -130,64 +137,73 @@ aside.sidebar{
     box-shadow: $shadow;
     border-radius: 0px 40px 0px 0px;
 
-    ul{
+    ul {
         display: flex;
         flex-direction: column;
         gap: toRem(70);
 
-        li{
-            svg{
-                width: toRem(25);
-                height: toRem(25);
+        li {
+            a{
+                transition: all 0.5s;
+                svg {
+                    width: toRem(25);
+                    height: toRem(25);
+                }
+
+                &:hover svg path{
+                    stroke: $primary;
+                }
             }
         }
     }
 }
 
-.card{
+.card {
     padding: toRem(15);
     background: $white;
     border-radius: toRem(5);
     box-shadow: $shadow;
 
-    &-title{
+    &-title {
         font-size: toRem(22);
         font-weight: 500;
     }
 
-    &-header{
+    &-header {
         padding: toRem(15);
         border-bottom: toRem(1) solid $border;
 
-        &-left{
+        &-left {
             gap: toRem(53);
-            
-            .legend{
+
+            .legend {
                 gap: toRem(25);
 
-                &-item{
+                &-item {
                     gap: toRem(15);
 
-                    .bar-legend, .line-legend{
+                    .bar-legend,
+                    .line-legend {
                         width: toRem(20);
                         height: toRem(20);
                         border-radius: toRem(3);
                     }
 
-                    .bar-legend{
+                    .bar-legend {
                         background: $primary;
                     }
 
-                    .line-legend{
+                    .line-legend {
                         background: $secondary;
                     }
                 }
             }
         }
 
-        .dropdown{
+        .dropdown {
             margin: 0 0 0 auto;
-            select{
+
+            select {
                 background: $white;
                 color: $black;
                 padding: toRem(7) toRem(15);
@@ -197,16 +213,16 @@ aside.sidebar{
             }
         }
 
-        .header-icons{
+        .header-icons {
             margin: 0 0 0 auto;
         }
 
-        .header-titles{
-            .card-title{
+        .header-titles {
+            .card-title {
                 font-size: toRem(28);
             }
 
-            a{
+            a {
                 text-decoration: underline;
                 font-weight: 500;
             }
@@ -214,47 +230,49 @@ aside.sidebar{
     }
 }
 
-.wrapper{
-    margin: toRem(65) 0 0; 
-    main{
+.wrapper {
+    margin: toRem(65) 0 0;
+
+    main {
         padding: 0 toRem(40);
         flex: 1 0 0;
 
-        .page-content{
+        .page-content {
             margin: 0 0 toRem(35);
-            h4{
+
+            h4 {
                 font-size: toRem(26);
                 margin: 0 0 toRem(23);
             }
         }
 
-        section{
+        section {
             padding: 0 0 toRem(50);
         }
 
-        section.app-info{
-            .card{
+        section.app-info {
+            .card {
                 height: 100%;
 
-                &-body{
+                &-body {
                     height: calc(100% - toRem(83));
                 }
             }
         }
 
-        .assesment{
+        .assesment {
             background: linear-gradient(74deg, $primary 6.27%, #5994CE 90.96%);
             border-radius: toRem(10);
             padding: toRem(50);
 
-            .list-icon{
+            .list-icon {
                 padding: toRem(22) toRem(34);
                 background: $white;
                 display: inline-block;
                 margin: 0 0 toRem(40);
             }
 
-            h2{
+            h2 {
                 color: $white;
                 font-size: toRem(56);
                 font-weight: 600;
@@ -262,21 +280,21 @@ aside.sidebar{
                 margin: 0 0 toRem(14);
             }
 
-            h4{
+            h4 {
                 color: $white;
                 font-size: toRem(22);
                 line-height: toRem(33);
             }
 
-            .img_align{
+            .img_align {
                 height: toRem(250);
 
-                .large{
+                .large {
                     transform: translateY(-6.25rem);
                 }
             }
 
-            .view-btn{
+            .view-btn {
                 color: $black;
                 font-weight: 500;
                 background: $white;
@@ -288,44 +306,47 @@ aside.sidebar{
             }
         }
 
-        .interview{
+        .interview {
             width: toRem(1320);
             overflow: auto;
             padding: toRem(57) toRem(23) toRem(30);
 
-            &-info{
+            &-info {
                 min-width: toRem(850);
                 border: toRem(1) solid $border;
                 border-radius: toRem(5);
 
-                .candidate-info{
+                .candidate-info {
                     text-align: center;
-                    .profile{
+
+                    .profile {
                         padding: toRem(46) toRem(25) toRem(25);
                         border-bottom: toRem(1) solid $border;
                         border-right: toRem(1) solid $border;
 
-                        img{
+                        img {
                             margin: 0 0 toRem(25);
                         }
-                        
-                        .role{
+
+                        .role {
                             font-size: toRem(14);
                             margin: toRem(6) 0 0;
                         }
                     }
 
-                    .date{
+                    .date {
                         padding: toRem(10) toRem(20);
                         border-right: toRem(1) solid $border;
-                        p{
+
+                        p {
                             margin: toRem(10) 0 0;
                             font-size: toRem(14);
                         }
                     }
                 }
 
-                .levels, .interviewer{
+                .levels,
+                .interviewer {
                     justify-content: center;
                     gap: toRem(28);
                     padding: toRem(35) 0 toRem(5);
@@ -333,62 +354,65 @@ aside.sidebar{
                     border-right: toRem(1) solid $border;
                 }
 
-                .interviewer{
+                .interviewer {
                     border-right: none;
                 }
 
-                .meeting-links{
+                .meeting-links {
                     padding: toRem(20) 0;
                     gap: toRem(15);
                 }
             }
         }
 
-        .jobs{
-            .card-header{
+        .jobs {
+            .card-header {
                 padding: toRem(15) 0 0;
             }
-            .nav-links{
+
+            .nav-links {
                 gap: toRem(75);
-    
-                .nav-item{
+
+                .nav-item {
                     font-size: toRem(20);
                     padding: toRem(7) toRem(20);
                     cursor: pointer;
 
-                    &.active{
+                    &.active {
                         background: $primary-light;
                     }
                 }
             }
 
-            .card-body{
+            .card-body {
                 padding: toRem(42) toRem(24);
             }
 
-            .job-posts{
+            .job-posts {
                 background: $white;
                 box-shadow: $shadow;
                 border-radius: toRem(5);
                 padding: toRem(6);
                 flex-basis: 25%;
 
-                .job-title{
+                .job-title {
                     padding: toRem(15);
                     border-bottom: toRem(1) solid $border;
-                    h5{
+
+                    h5 {
                         font-weight: 400;
                     }
-                    p{
+
+                    p {
                         font-size: toRem(14);
                     }
                 }
 
-                .job-description{
+                .job-description {
                     text-align: center;
                     padding: toRem(35) toRem(30);
 
-                    .job-applicant{
+                    .job-applicant {
                         padding: toRem(20) toRem(24);
                         background: $primary-light;
                         color: $primary;
@@ -400,31 +424,32 @@ aside.sidebar{
                     }
                 }
 
-                .job-schedule{
+                .job-schedule {
                     border-top: toRem(1) solid $border;
                     padding: toRem(9) toRem(15);
 
-                    p{
+                    p {
                         font-size: toRem(14);
                     }
                 }
             }
         }
 
-        .candidate-table{
+        .candidate-table {
 
-            .card-header{
+            .card-header {
                 border-bottom: none;
             }
 
-            .card-body{
-                padding: toRem(25) ;
+            .card-body {
+                padding: toRem(25);
             }
-            table{
+
+            table {
                 width: 100%;
                 border-spacing: 0;
 
-                thead th{
+                thead th {
                     background: $grey;
                     color: $black;
                     font-weight: 500;
@@ -432,26 +457,175 @@ aside.sidebar{
                     border-bottom: toRem(1) solid $black;
                     padding: toRem(15) toRem(25);
                 }
-    
-                tbody td{
+
+                tbody td {
                     padding: toRem(35) toRem(25) toRem(8);
                     border-bottom: toRem(1) solid $border;
 
-                    .status{
+                    .status {
                         font-size: toRem(14);
                         padding: toRem(5) toRem(18);
                         text-align: center;
 
-                        &.active{
+                        &.active {
                             color: $warning;
                             background: $warning-light;
+                        }
+
+                        &.hired {
+                            color: $success;
+                            background: $success-light;
+                        }
+
+                        &.reject {
+                            color: $danger;
+                            background: $danger-light;
                         }
                     }
                 }
             }
         }
 
+        .date-picker{
+            background: $white;
+            padding: 0 toRem(20);
+            border-radius: toRem(5);
+            box-shadow: $shadow;
+
+            .css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root, .css-knqc4i-MuiDialogActions-root{
+                display: none;
+            }
+
+            .css-1rtg91x-MuiDateCalendar-root{
+                width: 100%;
+            }
+
+            .css-i5q14k-MuiDayCalendar-header, .css-1aqny2q-MuiPickersCalendarHeader-root, .css-flbe84-MuiDayCalendar-weekContainer{
+                justify-content: space-between;
+            }
+        }
         
+        .header-titles-right {
+            padding: 0 0 toRem(60);
+
+            .title {
+                font-size: toRem(22);
+            }
+
+            a {
+                text-decoration: underline;
+                font-weight: 500;
+            }
+        }   
+
+        .dp {
+            width: 20%;
+        }     
+
+        .details {
+            flex-basis: 70%;
+            p {
+                font-size: toRem(14);
+                margin: 0 0 toRem(6);
+
+                &.strong {
+                    font-weight: 600;
+                }
+
+                &.timing {
+                    font-size: toRem(12);
+                    margin: 0 0 0;
+                }
+            }
+        }
+
+        .upcomings {
+
+            .events {
+                gap: toRem(15);
+                margin: 0 0 toRem(50);
+
+                &:last-child{
+                    margin: 0 0 0 ;
+                }
+
+                .date-box {
+                    padding: toRem(10) toRem(10);
+                    border-radius: 0.313rem;
+                    text-align: center;
+                    height: fit-content;
+                    width: 20%;
+
+                    p {
+                        font-size: toRem(14);
+                    }
+
+                    &.light-blue {
+                        background-color: $primary-light;
+
+                        p {
+                            color: $primary;
+                        }
+                    }
+
+                    &.dark-gray {
+                        background-color: $grey;
+
+                        p {
+                            color: $black;
+                        }
+                    }
+
+                    &.light-gray {
+                        background-color: $light-grey;
+                        color: $black;
+
+                        p {
+                            color: $black;
+                        }
+                    }
+
+                    .date {
+                        font-weight: 600;
+                        margin-bottom: 0.313rem;
+                    }
+                }
+
+                .primary-btn{
+                    font-size: toRem(14);
+                    border-radius: toRem(5);
+                }
+            }
+        }
+
+        .activity {
+
+            .activity-status {
+                gap: toRem(15);
+                margin-bottom: toRem(40);
+
+                &:last-child{
+                    margin: 0 0 0;
+                }
+
+                .dp {
+                    flex-basis: 20%;
+                }
+            }
+        }
+
+        .hiring {
+
+            .hiring-details {
+                gap: toRem(15);
+                margin: 0 0 toRem(40);
+            }
+
+            .outline-btn{
+                font-size: toRem(14);
+            }
+        }
+
+
     }
 }
-

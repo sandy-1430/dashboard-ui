@@ -1,5 +1,4 @@
 import Logo from '../assets/logo.png';
-import Search from '../assets/search-icon.png';
 import Theme from '../assets/theme.svg';
 import Upload from '../assets/upload.svg';
 import Chat from '../assets/chat.svg';
@@ -7,6 +6,7 @@ import Notification from '../assets/notification.svg';
 import Settings from '../assets/settings.svg';
 import User from '../assets/user.png';
 import { Each } from '../utilis/Each';
+import SearchBar from './SearchBar';
 
 
 export default function Header() {
@@ -25,10 +25,7 @@ export default function Header() {
                 <a className='logo'>
                     <img src={Logo} alt="logo" />
                 </a>
-                <div className="search-bar">
-                    <input type="text" placeholder='Search' />
-                    <img className='search-icon' src={Search} alt="search" />
-                </div>
+                <SearchBar />
             </div>
             <div className="right-header d-flex">
                 <Each of={iconsArr} render={(item)=>(
